@@ -21,7 +21,7 @@ class App extends Component {
         { id: 2,
           title: "Visit Site on AWS",
           color: "purple",
-          link: "https://github.com/pocketramiro/",
+          link: "http://pocketramirorails2-env.ejk9ccddbs.us-west-1.elasticbeanstalk.com/api/v1/resources",
           icon: "pr_computer.png"},
         { id: 3,
           title: "Endpoint Documentation",
