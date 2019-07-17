@@ -3,7 +3,7 @@ body {
   color: #282c34;
 }
 
-header {
+.App-header {
   display: grid;
   grid-template-columns: 1fr 7fr
 }
@@ -38,16 +38,6 @@ a.logo-link {
   display: flex;
   flex-wrap: wrap;
 }
-
-.card {
-  border-radius: 30px;
-  height: 200px;
-  width: 100%;
-  height: auto;
-  display: grid;
-  grid-template: 1fr 1fr / 1fr 1fr;
-}
-
 
 .icon-container {
   grid-column: 2 / span 1;

@@ -1,0 +1,72 @@
+
+.card {
+  border-radius: 30px;
+  height: 200px;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+}
+
+
+.salmon {
+  background: #FF9382;
+}
+
+.salmon:hover {
+  background: #FFC6B5
+}
+
+.purple {
+  background: #8782FF;
+}
+
+.purple:hover {
+  background: #BAB5FF;
+}
+
+.orange {
+  background: #FFB382;
+}
+.orange:hover {
+  background: #FFE6B5;
+}
+
+.light-blue {
+  background: #BBCBFF;
+}
+.light-blue:hover {
+  background: #EEFEFF;
+}
+
+.yellow {
+  background: #FFC882;
+}
+
+.yellow:hover {
+  background: #FFFBB5;
+}
+
+.peach {
+  background: #FFC29A;
+}
+
+.peach:hover {
+  background: #FFF5CD;
+}
+
+.mint {
+  background: #9CD9CB;
+}
+
+.mint:hover {
+  background: #c0e7de;
+}
+
+.pink {
+  background: #FAD2CE;
+}
+
+.pink:hover {
+  background: #FFECE8;
+}
