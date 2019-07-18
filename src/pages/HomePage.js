@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
+import Header from '../Header.js'
+import Footer from '../Footer.js'
 import Links from '../Links';
 import pr_logo from '../pr_logo.png';
 
@@ -10,40 +12,38 @@ class HomePage extends Component {
     this.state = {
       links: [
         { id: 1,
-          title: "Read about the Authors",
+          title_1: "Read about",
+          title_2: "the Authors",
           color: "salmon",
-          link: "https://github.com/pocketramiro/",
+          link: "https://master.d3bx8qvhmbmxu.amplifyapp.com/authors",
           icon: "pr_authors.png"},
         { id: 2,
-          title: "Visit Site on AWS",
+          title_1: "Visit Site",
+          title_2: "as a Guest",
           color: "purple",
-          link: "http://pocketramirorails2-env.ejk9ccddbs.us-west-1.elasticbeanstalk.com/api/v1/resources",
+          link: "https://master.d3bx8qvhmbmxu.amplifyapp.com/user_views",
           icon: "pr_computer.png"},
         { id: 3,
-          title: "Endpoint Documentation",
+          title_1: "Endpoint",
+          title_2: "Documentation",
           color: "orange",
-          link: "https://github.com/pocketramiro/",
+          link: "https://master.d3bx8qvhmbmxu.amplifyapp.com/endpoints",
           icon: "pr_brackets.png"},
         { id: 4,
-          title: "Contribute to our code",
+          title_1: "Contribute",
+          title_2: "to our code",
           color: "mint",
           link: "https://github.com/pocketramiro/",
-          icon: "pr_plus.png"},
+          icon: "pr_plus.png"}
       ]
     }
   }
   render() {
     return (
       <main className="App">
-        <header className="App-header">
-          <a class="logo-link" href="#">
-            <img src={pr_logo} alt="PocketRamiro logo"/>
-          </a>
-          <a class="logo-link" href="#">
-            <h1 class="right">Pocket Ramiro - Documentation</h1>
-          </a>
-        </header>
+        <Header />
         <Links links={this.state.links}/>
+        <Footer />
       </main>
     )
   }
