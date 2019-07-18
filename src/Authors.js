@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';
-import './Authors.css'
+import './stylesheets/Authors.css'
 
 const Authors = ({ authors }) => {
   const authorCards = authors.map(author => {

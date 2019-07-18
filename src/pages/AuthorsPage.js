@@ -41,7 +41,6 @@ class AuthorsPage extends Component {
           icon: "cw_circle.png",
           key: 4
         }
-
       ]
     }
   }

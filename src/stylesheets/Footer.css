@@ -1,8 +1,10 @@
 footer {
+  position: fixed;
   display: flex;
-  height: 50px;
+  height: 5vh;
   width: 100%;
   margin-bottom: 0px;
+  bottom: 0px;
 }
 
 .three-fractions {
