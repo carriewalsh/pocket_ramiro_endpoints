@@ -2,8 +2,8 @@
 .card {
   border-radius: 30px;
   height: 200px;
-  width: 20vw;
-  height: auto;
+  /* width: 20vw; */
+  /* height: auto; */
   display: grid;
   grid-template: 1fr 1fr / 1fr 1fr;
 }
