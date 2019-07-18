@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom'
 import Footer from '../Footer.js'
 import Header from '../Header.js'
 import Authors from '../Authors.js'
+import rb_circle from '../rb_circle.png'
+import mks_circle from '../mks_circle.png'
+import js_circle from '../js_circle.png'
+import cw_circle from '../cw_circle.png'
 
 class AuthorsPage extends Component {
   constructor() {
@@ -14,7 +18,7 @@ class AuthorsPage extends Component {
           title_2: "Barnett",
           color: "yellow",
           link: "https://github.com/RyanDBarnett",
-          icon: "rb_circle.png",
+          icon: rb_circle,
           key: 1
         },
         { id: 2,
@@ -22,7 +26,7 @@ class AuthorsPage extends Component {
           title_2: "King-Stockton",
           color: "purple",
           link: "https://github.com/KStockton",
-          icon: "mks_circle.png",
+          icon: mks_circle,
           key: 2
         },
         { id: 3,
@@ -30,7 +34,7 @@ class AuthorsPage extends Component {
           title_2: "Stiehl",
           color: "orange",
           link: "https://github.com/jennicastiehl/",
-          icon: "js_circle.png",
+          icon: js_circle,
           key: 3
         },
         { id: 4,
@@ -38,7 +42,7 @@ class AuthorsPage extends Component {
           title_2: "Walsh",
           color: "mint",
           link: "https://github.com/carriewalsh/",
-          icon: "cw_circle.png",
+          icon: cw_circle,
           key: 4
         }
       ]
