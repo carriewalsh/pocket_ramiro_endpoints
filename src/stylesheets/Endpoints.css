@@ -1,0 +1,4 @@
+.side-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+}
