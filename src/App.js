@@ -1,57 +1,25 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+import HomePage from './pages/HomePage'
+import AuthorsPage from './pages/AuthorsPage'
+import UserViewsPage from './pages/UserViewsPage'
+import EndpointsPage from './pages/EndpointsPage'
+
 import Links from './Links';
 import logo from './logo.svg';
-import pr_logo from './pr_logo.png';
-// import authors_icon from './pr_authors.png';
-// import brackets_icon from './pr_brackets.png';
-// import computer_icon from './pr_computer.png';
-// import plus_icon from './pr_plus.png';
 import './App.css';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      links: [
-        { id: 1,
-          title: "Read about the Authors",
-          color: "salmon",
-          link: "https://github.com/pocketramiro/",
-          icon: "pr_authors.png"},
-        { id: 2,
-          title: "Visit Site on AWS",
-          color: "purple",
-          link: "http://pocketramirorails2-env.ejk9ccddbs.us-west-1.elasticbeanstalk.com/api/v1/resources",
-          icon: "pr_computer.png"},
-        { id: 3,
-          title: "Endpoint Documentation",
-          color: "orange",
-          link: "https://github.com/pocketramiro/",
-          icon: "pr_brackets.png"},
-        { id: 4,
-          title: "Contribute to our code",
-          color: "mint",
-          link: "https://github.com/pocketramiro/",
-          icon: "pr_plus.png"},
-
-      ]
-    }
-  }
-
   render() {
     return (
-      <main className="App">
-        <header className="App-header">
-          <a class="logo-link" href="#">
-            <img src={pr_logo} alt="PocketRamiro logo"/>
-          </a>
-          <a class="logo-link" href="#">
-            <h1 class="right">Pocket Ramiro - Documentation</h1>
-          </a>
-        </header>
-        <Links links={this.state.links}/>
-      </main>
-    )
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/authors" component={AuthorsPage} />
+        <Route path="/user_views" component={UserViewsPage} />
+        <Route path="/endpoints" component={EndpointsPage} />
+      </Switch>
+    );
   }
 }
 
