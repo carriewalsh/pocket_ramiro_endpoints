@@ -12,8 +12,9 @@ code {
 
 .endpoint-card {
   height: 97vh;
-  width: 42vw;
-  margin: 1%;
+  width: 37vw;
+  margin: 2vw;
+  overflow: scroll;
 }
 
 .title-container {
