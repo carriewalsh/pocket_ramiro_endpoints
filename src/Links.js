@@ -7,7 +7,8 @@ const Links = ({ links }) => {
     return (
       <Card
         id={link.id}
-        title={link.title}
+        title_1={link.title_1}
+        title_2={link.title_2}
         color={link.color}
         icon={link.icon}
         key={link.id}
