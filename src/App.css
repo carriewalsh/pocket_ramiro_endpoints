@@ -12,8 +12,12 @@ body {
   grid-template-columns: 1fr 7fr
 }
 
+a {
+  text-decoration: none;
+}
+
 h2 {
-  font-size: 2vw;
+  font-size: 1.8vw;
 }
 
 header img {
@@ -30,7 +34,7 @@ header h1 {
 
 a.card-link {
   text-decoration: none;
-  width: 22%;
+  width: 24%;
   height: 25%;
   margin: 15px;
 }
