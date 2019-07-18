@@ -8,6 +8,15 @@
   grid-template: 1fr 1fr / 1fr 1fr;
 }
 
+.title-container {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 1;
+  padding: 15px;
+  color: white;
+  padding-right: 30%;
+}
 
 .salmon {
   background: #FF9382;
@@ -40,11 +49,11 @@
 }
 
 .yellow {
-  background: #FFC882;
+  background: #ffcf4d;
 }
 
 .yellow:hover {
-  background: #FFFBB5;
+  background: #ffe294;
 }
 
 .peach {
