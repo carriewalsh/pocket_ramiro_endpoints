@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import Header from '../Header.js'
 import Footer from '../Footer.js'
 import Links from '../Links';
-import pr_logo from '../pr_logo.png';
 
 class HomePage extends Component {
   constructor() {
