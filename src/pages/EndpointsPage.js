@@ -44,7 +44,7 @@ class EndpointsPage extends Component {
           id: 5,
           route: 'GET /api/v1/resource_types',
           request: `credentials`,
-          response: `[{\n id:1,\n category: Bright Tank,\n company: Tanks.com,\n contact_number: 444-444-4444,\n contact_name: John Johnson,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n },\n {\n id:2,\n category: Van,\n company: Chevrolet,\n contact_number: 333-333-3333,\n contact_name: John Johnsonite,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }]`,
+          response: `[{\n id:1,\n category: Bright Tank,\n company: Tanks.com,\n contact_number: 4444444444,\n contact_name: John Johnson,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n },\n {\n id:2,\n category: Van,\n company: Chevrolet,\n contact_number: 3333333333,\n contact_name: John Johnsonite,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }]`,
           color: "salmon",
           key: 5
         },
@@ -52,15 +52,15 @@ class EndpointsPage extends Component {
           id: 6,
           route: 'GET /api/v1/resource_types/:id',
           request: `credentials`,
-          response: `{\n id:1,\n category: Bright Tank,\n company: Tanks.com,\n contact_number: 444-444-4444,\n contact_name: John Johnson,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
+          response: `{\n id:1,\n category: Bright Tank,\n company: Tanks.com,\n contact_number: 4444444444,\n contact_name: John Johnson,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
           color: "salmon",
           key: 6
         },
         {
           id: 7,
           route: 'POST /api/v1/resource_types/:id',
-          request: `{\n category: Bright Tank,\n company: Tanks.com,\n contact_number: 444-444-4444,\n contact_name: John Johnson\n }`,
-          response: `{\n id:1,\n category: Bright Tank,\n company: Tanks.com,\n contact_number: 444-444-4444,\n contact_name: John Johnson,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
+          request: `{\n category: Bright Tank,\n company: Tanks.com,\n contact_number: 4444444444,\n contact_name: John Johnson\n }`,
+          response: `{\n id:1,\n category: Bright Tank,\n company: Tanks.com,\n contact_number: 4444444444,\n contact_name: John Johnson,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
           color: "salmon",
           key: 7
         },
@@ -68,7 +68,7 @@ class EndpointsPage extends Component {
           id: 8,
           route: 'PATCH /api/v1/resource_types/:id',
           request: `{\n company: Tanks.com\n }`,
-          response: `{\n id:1,\n category: Bright Tank,\n company: Tanks.gov,\n contact_number: 444-444-4444,\n contact_name: John Johnson,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
+          response: `{\n id:1,\n category: Bright Tank,\n company: Tanks.gov,\n contact_number: 4444444444,\n contact_name: John Johnson,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
           color: "salmon",
           key: 8
         },
@@ -148,7 +148,7 @@ class EndpointsPage extends Component {
           id: 18,
           route: 'GET /api/v1/\nresources/:resource_id/notes',
           request: `credentials`,
-          response: `[{\n id: 1,\n user_id: 1,\n table_key: 1,\n table_name: Resources,\n magna aliqua.,\n active: true,\n created_at: 2019-07-14T17:02:17.064Z,\n updated_at: 2019-07-14T17:02:17.064Z,\n },\n {\n id: 2,\n user_id: 1,\n table_key: 1,\n table_name: Resources,\n magna aliqua.,\n active: true,\n created_at: 2019-07-14T17:02:17.064Z,\n updated_at: 2019-07-14T17:02:17.064Z,\n }]`,
+          response: `[{\n id: 1,\n user_id: 1,\n table_key: 1,\n table_name: Resources,\ncontent: Don't forget to tell Jeff before shutting off.,\n active: true,\n created_at: 2019-07-14T17:02:17.064Z,\n updated_at: 2019-07-14T17:02:17.064Z,\n },\n {\n id: 2,\n user_id: 1,\n table_key: 1,\n table_name: Resources,\ncontent: Don't forget to tell Jeff before shutting off.,\n active: true,\n created_at: 2019-07-14T17:02:17.064Z,\n updated_at: 2019-07-14T17:02:17.064Z,\n }]`,
           color: "pink",
           key: 18
         },
@@ -156,15 +156,15 @@ class EndpointsPage extends Component {
           id: 19,
           route: 'GET /api/v1/\nresources/:resource_id/notes/:id',
           request: `credentials`,
-          response: `{\n id: 1,\n user_id: 1,\n table_key: 1,\n table_name: Resources,\n magna aliqua.,\n active: true,\n created_at: 2019-07-14T17:02:17.064Z,\n updated_at: 2019-07-14T17:02:17.064Z,\n }`,
+          response: `{\n id: 1,\n user_id: 1,\n table_key: 1,\n table_name: Resources,\ncontent: Don't forget to tell Jeff before shutting off.,\n active: true,\n created_at: 2019-07-14T17:02:17.064Z,\n updated_at: 2019-07-14T17:02:17.064Z,\n }`,
           color: "pink",
           key: 19
         },
         {
           id: 20,
           route: 'POST /api/v1/\nresources/:resource_id/notes',
-          request: `{\n user_id: 1,\n table_key: 1,\n table_name: Resources,\n magna aliqua.,\n }`,
-          response: `{\n id: 1,\n user_id: 1,\n table_key: 1,\n table_name: Resources,\n magna aliqua.,\n active: true,\n created_at: 2019-07-14T17:02:17.064Z,\n updated_at: 2019-07-14T17:02:17.064Z,\n }`,
+          request: `{\n user_id: 1,\n table_key: 1,\n table_name: Resources,\ncontent: Don't forget to tell Jeff before shutting off.,\n }`,
+          response: `{\n id: 1,\n user_id: 1,\n table_key: 1,\n table_name: Resources,\ncontent: Don't forget to tell Jeff before shutting off.,\n active: true,\n created_at: 2019-07-14T17:02:17.064Z,\n updated_at: 2019-07-14T17:02:17.064Z,\n }`,
           color: "pink",
           key: 20
         },
@@ -172,7 +172,7 @@ class EndpointsPage extends Component {
           id: 21,
           route: 'PATCH /api/v1/\nresources/:resource_id/notes/:id',
           request: `{\n content: This machine is cranky.\n `,
-          response: `{\n id: 2,\n user_id: 1,\n table_key: 1,\n table_name: Resources,\n magna aliqua.,\n active: true,\n created_at: 2019-07-14T17:02:17.064Z,\n updated_at: 2019-07-14T17:02:17.064Z,\n }`,
+          response: `{\n id: 2,\n user_id: 1,\n table_key: 1,\n table_name: Resources,\ncontent: This machine is cranky.,\n active: true,\n created_at: 2019-07-14T17:02:17.064Z,\n updated_at: 2019-07-14T17:02:17.064Z,\n }`,
           color: "pink",
           key: 21
         },
@@ -187,16 +187,16 @@ class EndpointsPage extends Component {
         {
           id: 23,
           route: 'POST /api/v1/users',
-          request: `{\n name: Cameron Clarks,\n email: example@example.com,\n password: password,\n password_confirmation: password,\n phone_number: 555-555-5555,\n role: admin\n }`,
-          response: `{\n id: 1,\n name: Cameron Marks,\n email: example@example.com,\n password_digest: qp34uchon8w47yabov8ezfhpv,\n phone_number: 555-555-5555,\n role: admin,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
+          request: `{\n name: Cameron Clarks,\n email: example@example.com,\n password: password,\n password_confirmation: password,\n phone_number: 5555555555,\n role: admin\n }`,
+          response: `{\n id: 1,\n name: Cameron Marks,\n email: example@example.com,\n password_digest: qp34uchon8w47yabov8ezfhpv,\n phone_number: 5555555555,\n role: admin,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
           color: "orange",
           key: 23
         },
         {
           id: 24,
           route: 'PATCH /api/v1/users/:id',
-          request: `{\n phone_number: 777-777-7777\n }`,
-          response: `{\n id: 1,\n name: Cameron Marks,\n email: example@example.com,\n password_digest: qp34uchon8w47yabov8ezfhpv,\n phone_number: 777-777-7777,\n role: admin,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
+          request: `{\n phone_number: 7777777777\n }`,
+          response: `{\n id: 1,\n name: Cameron Marks,\n email: example@example.com,\n password_digest: qp34uchon8w47yabov8ezfhpv,\n phone_number: 7777777777,\n role: admin,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
           color: "orange",
           key: 24
         }
