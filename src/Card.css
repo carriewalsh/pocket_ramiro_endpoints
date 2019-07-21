@@ -8,6 +8,7 @@ code {
   height: 200px;
   display: grid;
   grid-template: 1fr 1fr / 1fr 1fr;
+  z-index: 8;
 }
 
 .endpoint-card {
