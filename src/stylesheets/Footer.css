@@ -5,6 +5,7 @@ footer {
   width: 100%;
   margin-bottom: 0px;
   bottom: 0px;
+  z-index: 9;
 }
 
 .three-fractions {
