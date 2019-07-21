@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Footer from '../Footer.js'
 import Header from '../Header.js'
 import Endpoints from '../Endpoints.js'
+import EndpointHeader from '../EndpointHeader.js'
+import '../stylesheets/EndpointHeader.css'
 
 class EndpointsPage extends Component {
   constructor() {
@@ -224,6 +226,7 @@ class EndpointsPage extends Component {
     return(
       <main className="App">
         <Header />
+        <EndpointHeader />
           <div class="side-scroll">
             <Endpoints endpoints={this.state.endpoints}/>
           </div>
