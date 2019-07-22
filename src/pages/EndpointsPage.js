@@ -29,7 +29,7 @@ class EndpointsPage extends Component {
         {
           id: 3,
           route: 'POST /api/v1/resources',
-          request: `{\n resource_type_id: 1,\n name: Bright Tank 3,\n cost: 5000.00,\n user_id: 1,\n active: true,\n created_at: 2019-'07-16T21:52:00.823Z',\n updated_at: '2019-07-16T21:52:00.823Z'\n}`,
+          request: `{\n resource_type_id: 1,\n name: Bright Tank 3,\n cost: 5000.00,\n user_id: 1\n}`,
           response: `{\n id: 2,\n machine_type_id: 1,\n user_id: 1,\n name: Bright Tank 2,\n cost: 5000.00,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
           color: "mint",
           key: 3
@@ -60,7 +60,7 @@ class EndpointsPage extends Component {
         },
         {
           id: 7,
-          route: 'POST /api/v1/resource_types/:id',
+          route: 'POST /api/v1/resource_types',
           request: `{\n category: Bright Tank,\n company: Tanks.com,\n contact_number: 4444444444,\n contact_name: John Johnson\n }`,
           response: `{\n id: 1,\n category: Bright Tank,\n company: Tanks.com,\n contact_number: 4444444444,\n contact_name: John Johnson,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
           color: "salmon",
@@ -220,7 +220,7 @@ class EndpointsPage extends Component {
         },
         {
           id: 27,
-          route: 'POST /api/v1/sessions',
+          route: 'DELETE /api/v1/sessions',
           request: `n/a`,
           response: `{\n message: "Successfully logged out."\n }`,
           color: "light-blue",
