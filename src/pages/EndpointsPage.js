@@ -14,7 +14,7 @@ class EndpointsPage extends Component {
           id: 1,
           route: 'GET /api/v1/resources',
           request: `credentials`,
-          response: `[{\n id: 1,\n resource_type_id: 1,\n user_id: 1,\n name: Bright Tank 1,\n cost: 5000.00,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n },\n {\n id: 2,\n resource_type_id: 1,\n user_id: 1,\n name: Bright Tank 2,\n cost: 5000.00,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }]`,
+          response: `{\n"data": [{\n"id": "2",\n"type": "resource",\n"attributes": {\n"id": 2,\n"resource_type_id": 1,\n"name": "Bright Tank 2",\n"cost": 10000.0,\n"user_id": 1,\n"active": true,\n"created_at": "2007-12-29T13:13:04.000Z",\n"updated_at": "2007-12-29T13:13:04.000Z"\n},\n"relationships": {\n"user": {\n"data": {\n"id": "1",\n"type": "user"\n}}}}],\n"included": [\n{\n"id": "1",\n"type": "user",\n"attributes": {\n"id": 1,\n"name": "Cameron Clarks",\n"phone_number": 5555555555,\n"email": "cameron_clarks@greatdivide.com",\n"role": "admin",\n"active": true,\n"created_at": "2015-11-29T00:00:00.000Z",\n"updated_at": "2019-06-01T00:00:00.000Z"\n}}]}`,
           color: "mint",
           key: 1
         },
@@ -22,7 +22,7 @@ class EndpointsPage extends Component {
           id: 2,
           route: 'GET /api/v1/resources/:id',
           request: `credentials`,
-          response: `{\n id: 2,\n machine_type_id: 1,\n user_id: 1,\n name: Bright Tank 2,\n cost: 5000.00,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
+          response: `{\n"data": {\n"id": "2",\n"type": "resource",\n"attributes": {\n"id": 2,\n"resource_type_id": 1,\n"name": "Bright Tank 2",\n"cost": 10000.0,\n"user_id": 1,\n"active": true,\n"created_at": "2007-12-29T13:13:04.000Z",\n"updated_at": "2007-12-29T13:13:04.000Z"\n},\n"relationships": {\n"user": {\n"data": {\n"id": "1",\n"type": "user"\n}}}},\n"included": [\n{\n"id": "1",\n"type": "user",\n"attributes": {\n"id": 1,\n"name": "Cameron Clarks",\n"phone_number": 5555555555,\n"email": "cameron_clarks@greatdivide.com",\n"role": "admin",\n"active": true,\n"created_at": "2015-11-29T00:00:00.000Z",\n"updated_at": "2019-06-01T00:00:00.000Z"\n}}]}`,
           color: "mint",
           key: 2
         },
@@ -142,7 +142,7 @@ class EndpointsPage extends Component {
           id: 17,
           route: 'GET /api/v1/tickets',
           request: `credentials`,
-          response: `{\ndata: [\n{\nid: 1,\ntype: ticket,\nattributes: {\nid: 1,\ntable_key: 15,\ntable_name: Resources,\nuser_id: 1,\nnotes: Lorem ipsum dolor sit amet.,\npriority: low,\nfrequency_unit: 1,\nfrequency_value: 0,\ncreated_at: 2019-06-22T22:42:12.000Z,\nupdated_at: 2019-06-22T22:42:12.000Z,\nstatus: null\n},\nrelationships: {\nuser: {\ndata: {\nid: 1,\ntype: user\n}}}}\n],\nincluded: [\n{\nid: 1,\ntype: user,\nattributes: {\nid: 1,\nname: Cameron Marks,\nphone_number: 7208674848,\nemail: cameron_marks@greatdivide.com,\nrole: admin,\nactive: true,\ncreated_at: 2015-11-29T00:00:00.000Z,\nupdated_at: 2019-06-01T00:00:00.000Z\n}}]}`,
+          response: `{\ndata: [\n{\nid: 1,\ntype: ticket,\nattributes: {\nid: 1,\ntable_key: 15,\ntable_name: Resources,\nuser_id: 1,\nnotes: Lorem ipsum dolor sit amet.,\npriority: low,\nfrequency_unit: 1,\nfrequency_value: 0,\ncreated_at: 2019-06-22T22:42:12.000Z,\nupdated_at: 2019-06-22T22:42:12.000Z,\nstatus: null\n},\nrelationships: {\nuser: {\ndata: {\nid: 1,\ntype: user\n}}}}\n],\nincluded: [\n{\nid: 1,\ntype: user,\nattributes: {\nid: 1,\nname: Cameron Clarks,\nphone_number: 5555555555,\nemail: cameron_clarks@greatdivide.com,\nrole: admin,\nactive: true,\ncreated_at: 2015-11-29T00:00:00.000Z,\nupdated_at: 2019-06-01T00:00:00.000Z\n}}]}`,
           color: "purple",
           key: 17
         },
@@ -150,7 +150,7 @@ class EndpointsPage extends Component {
           id: 18,
           route: 'GET /api/v1/tickets/1',
           request: `credentials`,
-          response: `{\ndata: {\nid: 1,\ntype: ticket,\nattributes: {\nid: 1,\ntable_key: 15,\ntable_name: Resources,\nuser_id: 1,\nnotes: Lorem ipsum dolor sit amet.,\npriority: low,\nfrequency_unit: 1,\nfrequency_value: 0,\ncreated_at: 2019-06-22T22:42:12.000Z,\nupdated_at: 2019-06-22T22:42:12.000Z,\nstatus: null\n},\nrelationships: {\nuser: {\ndata: {\nid: 1,\ntype: user\n}}}},\nincluded: [\n{\nid: 1,\ntype: user,\nattributes: {\nid: 1,\nname: Cameron Marks,\nphone_number: 7208674848,\nemail: cameron_marks@greatdivide.com,\nrole: admin,\nactive: true,\ncreated_at: 2015-11-29T00:00:00.000Z,\nupdated_at: 2019-06-01T00:00:00.000Z\n}}]}`,
+          response: `{\ndata: {\nid: 1,\ntype: ticket,\nattributes: {\nid: 1,\ntable_key: 15,\ntable_name: Resources,\nuser_id: 1,\nnotes: Lorem ipsum dolor sit amet.,\npriority: low,\nfrequency_unit: 1,\nfrequency_value: 0,\ncreated_at: 2019-06-22T22:42:12.000Z,\nupdated_at: 2019-06-22T22:42:12.000Z,\nstatus: null\n},\nrelationships: {\nuser: {\ndata: {\nid: 1,\ntype: user\n}}}},\nincluded: [\n{\nid: 1,\ntype: user,\nattributes: {\nid: 1,\nname: Cameron Clarks,\nphone_number: 5555555555,\nemail: cameron_clarks@greatdivide.com,\nrole: admin,\nactive: true,\ncreated_at: 2015-11-29T00:00:00.000Z,\nupdated_at: 2019-06-01T00:00:00.000Z\n}}]}`,
           color: "purple",
           key: 18
         },
@@ -158,7 +158,7 @@ class EndpointsPage extends Component {
           id: 19,
           route: 'GET /api/v1/\nresources/:resource_id/notes',
           request: `credentials`,
-          response: `[{\n id: 1,\n user_id: 1,\n table_key: 1,\n table_name: Resources,\ncontent: Tell Jeff before shutting off.,\n active: true,\n created_at: 2019-07-14T17:02:17.064Z,\n updated_at: 2019-07-14T17:02:17.064Z,\n },\n {\n id: 2,\n user_id: 1,\n table_key: 1,\n table_name: Resources,\ncontent: Tell Jeff before shutting off.,\n active: true,\n created_at: 2019-07-14T17:02:17.064Z,\n updated_at: 2019-07-14T17:02:17.064Z,\n }]`,
+          response: `{\n"data": [\n{\n"id": "3",\n"type": "note",\n"attributes": {\n"id": 3,\n"table_name": "Resources",\n"table_key": 2,\n"content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco\nlaboris nisi ut aliquip ex ea commodo consequat. ",\n"user_id": 1,\n"active": true,\n"created_at": "2019-07-02T12:23:34.000Z",\n"updated_at": "2019-07-02T12:23:34.000Z"\n},\n"relationships": {\n"user": {\n"data": {\n"id": "1",\n"type": "user"\n}}}}],\n"included": [\n{\n"id": "1",\n"type": "user",\n"attributes": {\n"id": 1,\n"name": "Cameron Clarks",\n"phone_number": 5555555555,\n"email": "cameron_clarks@greatdivide.com",\n"role": "admin",\n"active": true,\n"created_at": "2015-11-29T00:00:00.000Z",\n"updated_at": "2019-06-01T00:00:00.000Z"\n}}}`,
           color: "pink",
           key: 19
         },
@@ -166,7 +166,7 @@ class EndpointsPage extends Component {
           id: 20,
           route: 'GET /api/v1/\nresources/:resource_id/notes/:id',
           request: `credentials`,
-          response: `{\n id: 1,\n user_id: 1,\n table_key: 1,\n table_name: Resources,\ncontent: Tell Jeff before shutting off.,\n active: true,\n created_at: 2019-07-14T17:02:17.064Z,\n updated_at: 2019-07-14T17:02:17.064Z,\n }`,
+          response: `{\n"data": \n{\n"id": "3",\n"type": "note",\n"attributes": {\n"id": 3,\n"table_name": "Resources",\n"table_key": 2,\n"content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco\nlaboris nisi ut aliquip ex ea commodo consequat. ",\n"user_id": 1,\n"active": true,\n"created_at": "2019-07-02T12:23:34.000Z",\n"updated_at": "2019-07-02T12:23:34.000Z"\n},\n"relationships": {\n"user": {\n"data": {\n"id": "1",\n"type": "user"\n}}}},\n"included": [\n{\n"id": "1",\n"type": "user",\n"attributes": {\n"id": 1,\n"name": "Cameron Clarks",\n"phone_number": 5555555555,\n"email": "cameron_clarks@greatdivide.com",\n"role": "admin",\n"active": true,\n"created_at": "2015-11-29T00:00:00.000Z",\n"updated_at": "2019-06-01T00:00:00.000Z"\n}}}`,
           color: "pink",
           key: 20
         },
@@ -198,7 +198,7 @@ class EndpointsPage extends Component {
           id: 24,
           route: 'POST /api/v1/users',
           request: `{\n name: Cameron Clarks,\n email: example@example.com,\n password: password,\n password_confirmation: password,\n phone_number: 5555555555,\n role: admin\n }`,
-          response: `{\n id: 1,\n name: Cameron Marks,\n email: example@example.com,\n password_digest: qp34uchon8w47yabov8ezfhpv,\n phone_number: 5555555555,\n role: admin,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
+          response: `{\n id: 1,\n name: Cameron Clarks,\n email: example@example.com,\n password_digest: qp34uchon8w47yabov8ezfhpv,\n phone_number: 5555555555,\n role: admin,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
           color: "orange",
           key: 24
         },
@@ -206,7 +206,7 @@ class EndpointsPage extends Component {
           id: 25,
           route: 'PATCH /api/v1/users/:id',
           request: `{\n phone_number: 7777777777\n }`,
-          response: `{\n id: 1,\n name: Cameron Marks,\n email: example@example.com,\n password_digest: qp34uchon8w47yabov8ezfhpv,\n phone_number: 7777777777,\n role: admin,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
+          response: `{\n id: 1,\n name: Cameron Clarks,\n email: example@example.com,\n password_digest: qp34uchon8w47yabov8ezfhpv,\n phone_number: 7777777777,\n role: admin,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
           color: "orange",
           key: 25
         },
