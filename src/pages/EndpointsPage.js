@@ -142,81 +142,89 @@ class EndpointsPage extends Component {
           id: 17,
           route: 'GET /api/v1/tickets',
           request: `credentials`,
-          response: `[{\n id: 1,\n table_key: 1,\n table_name: Resources,\n user_id: 1,\n notes: needs oil change,\n priority: high,\n frequency_unit: null,\n frequency_value: null,\n created_at: 2019-07-14T17:02:17.064Z,\n updated_at: 2019-07-14T17:02:17.064Z,\n active: true\n }]`,
+          response: `{\ndata: [\n{\nid: 1,\ntype: ticket,\nattributes: {\nid: 1,\ntable_key: 15,\ntable_name: Resources,\nuser_id: 1,\nnotes: Lorem ipsum dolor sit amet.,\npriority: low,\nfrequency_unit: 1,\nfrequency_value: 0,\ncreated_at: 2019-06-22T22:42:12.000Z,\nupdated_at: 2019-06-22T22:42:12.000Z,\nstatus: null\n},\nrelationships: {\nuser: {\ndata: {\nid: 1,\ntype: user\n}}}}\n],\nincluded: [\n{\nid: 1,\ntype: user,\nattributes: {\nid: 1,\nname: Cameron Marks,\nphone_number: 7208674848,\nemail: cameron_marks@greatdivide.com,\nrole: admin,\nactive: true,\ncreated_at: 2015-11-29T00:00:00.000Z,\nupdated_at: 2019-06-01T00:00:00.000Z\n}}]}`,
           color: "purple",
           key: 17
         },
         {
           id: 18,
-          route: 'GET /api/v1/\nresources/:resource_id/notes',
+          route: 'GET /api/v1/tickets/1',
           request: `credentials`,
-          response: `[{\n id: 1,\n user_id: 1,\n table_key: 1,\n table_name: Resources,\ncontent: Tell Jeff before shutting off.,\n active: true,\n created_at: 2019-07-14T17:02:17.064Z,\n updated_at: 2019-07-14T17:02:17.064Z,\n },\n {\n id: 2,\n user_id: 1,\n table_key: 1,\n table_name: Resources,\ncontent: Tell Jeff before shutting off.,\n active: true,\n created_at: 2019-07-14T17:02:17.064Z,\n updated_at: 2019-07-14T17:02:17.064Z,\n }]`,
-          color: "pink",
+          response: `{\ndata: {\nid: 1,\ntype: ticket,\nattributes: {\nid: 1,\ntable_key: 15,\ntable_name: Resources,\nuser_id: 1,\nnotes: Lorem ipsum dolor sit amet.,\npriority: low,\nfrequency_unit: 1,\nfrequency_value: 0,\ncreated_at: 2019-06-22T22:42:12.000Z,\nupdated_at: 2019-06-22T22:42:12.000Z,\nstatus: null\n},\nrelationships: {\nuser: {\ndata: {\nid: 1,\ntype: user\n}}}},\nincluded: [\n{\nid: 1,\ntype: user,\nattributes: {\nid: 1,\nname: Cameron Marks,\nphone_number: 7208674848,\nemail: cameron_marks@greatdivide.com,\nrole: admin,\nactive: true,\ncreated_at: 2015-11-29T00:00:00.000Z,\nupdated_at: 2019-06-01T00:00:00.000Z\n}}]}`,
+          color: "purple",
           key: 18
         },
         {
           id: 19,
-          route: 'GET /api/v1/\nresources/:resource_id/notes/:id',
+          route: 'GET /api/v1/\nresources/:resource_id/notes',
           request: `credentials`,
-          response: `{\n id: 1,\n user_id: 1,\n table_key: 1,\n table_name: Resources,\ncontent: Tell Jeff before shutting off.,\n active: true,\n created_at: 2019-07-14T17:02:17.064Z,\n updated_at: 2019-07-14T17:02:17.064Z,\n }`,
+          response: `[{\n id: 1,\n user_id: 1,\n table_key: 1,\n table_name: Resources,\ncontent: Tell Jeff before shutting off.,\n active: true,\n created_at: 2019-07-14T17:02:17.064Z,\n updated_at: 2019-07-14T17:02:17.064Z,\n },\n {\n id: 2,\n user_id: 1,\n table_key: 1,\n table_name: Resources,\ncontent: Tell Jeff before shutting off.,\n active: true,\n created_at: 2019-07-14T17:02:17.064Z,\n updated_at: 2019-07-14T17:02:17.064Z,\n }]`,
           color: "pink",
           key: 19
         },
         {
           id: 20,
-          route: 'POST /api/v1/\nresources/:resource_id/notes',
-          request: `{\n user_id: 1,\n table_key: 1,\n table_name: Resources,\ncontent: Tell Jeff before shutting off.,\n }`,
+          route: 'GET /api/v1/\nresources/:resource_id/notes/:id',
+          request: `credentials`,
           response: `{\n id: 1,\n user_id: 1,\n table_key: 1,\n table_name: Resources,\ncontent: Tell Jeff before shutting off.,\n active: true,\n created_at: 2019-07-14T17:02:17.064Z,\n updated_at: 2019-07-14T17:02:17.064Z,\n }`,
           color: "pink",
           key: 20
         },
         {
           id: 21,
-          route: 'PATCH /api/v1/\nresources/:resource_id/notes/:id',
-          request: `{\n content: This machine is cranky.\n }`,
-          response: `{\n id: 2,\n user_id: 1,\n table_key: 1,\n table_name: Resources,\ncontent: This machine is cranky.,\n active: true,\n created_at: 2019-07-14T17:02:17.064Z,\n updated_at: 2019-07-14T17:02:17.064Z,\n }`,
+          route: 'POST /api/v1/\nresources/:resource_id/notes',
+          request: `{\n user_id: 1,\n table_key: 1,\n table_name: Resources,\ncontent: Tell Jeff before shutting off.,\n }`,
+          response: `{\n id: 1,\n user_id: 1,\n table_key: 1,\n table_name: Resources,\ncontent: Tell Jeff before shutting off.,\n active: true,\n created_at: 2019-07-14T17:02:17.064Z,\n updated_at: 2019-07-14T17:02:17.064Z,\n }`,
           color: "pink",
           key: 21
         },
         {
           id: 22,
-          route: 'GET /api/v1/users/:id',
-          request: `credentials`,
-          response: `[{ \nid: 1, \nname: Cameron Clarks, \nemail: example@example.com, \npassword_digest: qp34uchon8w47yabov8ezfhpv, \nphone_number: 5555555555, \nrole: admin, \nactive: true, \ncreated_at: 2019-07-16T21:52:00.823Z, \nupdated_at: 2019-07-16T21:52:00.823Z \n}] \n`,
-          color: "orange",
+          route: 'PATCH /api/v1/\nresources/:resource_id/notes/:id',
+          request: `{\n content: This machine is cranky.\n }`,
+          response: `{\n id: 2,\n user_id: 1,\n table_key: 1,\n table_name: Resources,\ncontent: This machine is cranky.,\n active: true,\n created_at: 2019-07-14T17:02:17.064Z,\n updated_at: 2019-07-14T17:02:17.064Z,\n }`,
+          color: "pink",
           key: 22
         },
         {
           id: 23,
-          route: 'POST /api/v1/users',
-          request: `{\n name: Cameron Clarks,\n email: example@example.com,\n password: password,\n password_confirmation: password,\n phone_number: 5555555555,\n role: admin\n }`,
-          response: `{\n id: 1,\n name: Cameron Marks,\n email: example@example.com,\n password_digest: qp34uchon8w47yabov8ezfhpv,\n phone_number: 5555555555,\n role: admin,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
+          route: 'GET /api/v1/users/:id',
+          request: `credentials`,
+          response: `[{ \nid: 1, \nname: Cameron Clarks, \nemail: example@example.com, \npassword_digest: qp34uchon8w47yabov8ezfhpv, \nphone_number: 5555555555, \nrole: admin, \nactive: true, \ncreated_at: 2019-07-16T21:52:00.823Z, \nupdated_at: 2019-07-16T21:52:00.823Z \n}] \n`,
           color: "orange",
           key: 23
         },
         {
           id: 24,
-          route: 'PATCH /api/v1/users/:id',
-          request: `{\n phone_number: 7777777777\n }`,
-          response: `{\n id: 1,\n name: Cameron Marks,\n email: example@example.com,\n password_digest: qp34uchon8w47yabov8ezfhpv,\n phone_number: 7777777777,\n role: admin,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
+          route: 'POST /api/v1/users',
+          request: `{\n name: Cameron Clarks,\n email: example@example.com,\n password: password,\n password_confirmation: password,\n phone_number: 5555555555,\n role: admin\n }`,
+          response: `{\n id: 1,\n name: Cameron Marks,\n email: example@example.com,\n password_digest: qp34uchon8w47yabov8ezfhpv,\n phone_number: 5555555555,\n role: admin,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
           color: "orange",
           key: 24
         },
         {
           id: 25,
+          route: 'PATCH /api/v1/users/:id',
+          request: `{\n phone_number: 7777777777\n }`,
+          response: `{\n id: 1,\n name: Cameron Marks,\n email: example@example.com,\n password_digest: qp34uchon8w47yabov8ezfhpv,\n phone_number: 7777777777,\n role: admin,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
+          color: "orange",
+          key: 25
+        },
+        {
+          id: 26,
           route: 'POST /api/v1/sessions',
           request: `{\n email: example@example.com\n password: password\n }`,
           response: `{\n session: {\n user_id: 6,\n name: Yennica Stout,\n role: admin\n }\n }`,
           color: "light-blue",
-          key: 25
+          key: 26
         },
         {
-          id: 25,
+          id: 27,
           route: 'POST /api/v1/sessions',
           request: `n/a`,
           response: `{\n message: "Successfully logged out."\n }`,
           color: "light-blue",
-          key: 25
+          key: 27
         }
 
       ]
