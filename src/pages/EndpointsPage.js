@@ -44,7 +44,7 @@ class EndpointsPage extends Component {
         },
         {
           id: 5,
-          route: 'GET /api/v1/5555555555s',
+          route: 'GET /api/v1/resource_types',
           request: `credentials`,
           response: `[{\n id: 1,\n category: Bright Tank,\n company: Tanks.com,\n contact_number: 4444444444,\n contact_name: John Johnson,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n },\n {\n id:2,\n category: Van,\n company: Chevrolet,\n contact_number: 3333333333,\n contact_name: John Johnsonite,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }]`,
           color: "salmon",
@@ -52,7 +52,7 @@ class EndpointsPage extends Component {
         },
         {
           id: 6,
-          route: 'GET /api/v1/5555555555s/:id',
+          route: 'GET /api/v1/resource_types',
           request: `credentials`,
           response: `{\n id: 1,\n category: Bright Tank,\n company: Tanks.com,\n contact_number: 4444444444,\n contact_name: John Johnson,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
           color: "salmon",
@@ -60,7 +60,7 @@ class EndpointsPage extends Component {
         },
         {
           id: 7,
-          route: 'POST /api/v1/5555555555s',
+          route: 'POST /api/v1/resource_types',
           request: `{\n category: Bright Tank,\n company: Tanks.com,\n contact_number: 4444444444,\n contact_name: John Johnson\n }`,
           response: `{\n id: 1,\n category: Bright Tank,\n company: Tanks.com,\n contact_number: 4444444444,\n contact_name: John Johnson,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
           color: "salmon",
@@ -68,7 +68,7 @@ class EndpointsPage extends Component {
         },
         {
           id: 8,
-          route: 'PATCH /api/v1/5555555555s/:id',
+          route: 'PATCH /api/v1/resource_types',
           request: `{\n company: Tanks.gov\n }`,
           response: `{\n id: 1,\n category: Bright Tank,\n company: Tanks.gov,\n contact_number: 4444444444,\n contact_name: John Johnson,\n active: true,\n created_at: 2019-07-16T21:52:00.823Z,\n updated_at: 2019-07-16T21:52:00.823Z\n }`,
           color: "salmon",
