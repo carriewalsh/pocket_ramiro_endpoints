@@ -220,7 +220,7 @@ class EndpointsPage extends Component {
         },
         {
           id: 27,
-          route: 'DELETE /api/v1/sessions',
+          route: 'DELETE /api/v1/sessions/:id',
           request: `n/a`,
           response: `{\n message: "Successfully logged out."\n }`,
           color: "light-blue",
