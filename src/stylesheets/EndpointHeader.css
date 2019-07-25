@@ -6,6 +6,7 @@
   margin-top: -10vh;
   margin-bottom: 100px;
   position: fixed;
+  z-index: -1;
 }
 
 .resource {
